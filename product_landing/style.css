@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #f15831;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur{
+    height: 300px;
+    width: 300px;
+    background-color: #cddcd4;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(200px);
+    z-index: 9;
+}
+
+#nav{
+    height: 145px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.064);
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 150px ;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+} 
+
+#nav img{
+    height: 75px;
+}
+
+#nav h{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#img1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+
+}
+
+#main{
+    position: relative;
+    background-color:  rgba(0, 0, 0, 0.37);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    
+}
+
+#page1 h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#page1 h1::before{
+    content: "Data Analytics Training";
+    position: absolute;
+    color: rgba(0, 0, 0, 0.438);
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 2px #f5620070;
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#page1 p{
+    font-size: 15px;
+    font-weight: 400;
+    width: 40%;
+}
+
+#page2{
+    background-color: rgb(218, 216, 216);
+    min-height: 100;
+    z-index: 10;
+    ;
+}
+
+#ourstudent{
+    font-size: 30px;
+    font-weight: 250;
+    text-align: center;
+     
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+#ours{
+    color: #000;
+    padding: 5%;
+}
+
+#scroller{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 0px 20px rgb(119, 120, 120) inset;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 5%;
+     
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* #scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+} */
+
+#scroller h4{
+    display: inline-block; 
+    font-size: 90px;
+    font-weight: 700;
+    font-family: gilroy; 
+    margin-top: 2%;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 0.75px rgb(244, 164, 135);
+}
+
+#scroller h4:hover{
+    color: rgb(209, 208, 208);
+   
+}
+
+@keyframes scroll {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+
+#about-us{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 50px;
+    margin-top: 150px;
+    margin-bottom: 250px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+    
+}
+
+#about-us img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-us-in{
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3{
+    color: #000;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 30px;
+}
+
+#about-us-in p{
+    color: #000;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+#card-container{
+    /* background-color: red; */
+    height: 60vh;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 80%;
+    width: 25%;
+    /* background-color: blue; */
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.8s;
+}
+
+#card1{
+    background-image: url(img4.webp);
+}
+
+#card2{
+    background-image: url(img5.jpg);
+}
+
+#card3{
+    background-image: url(img6.jpg);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #f15731;
+    padding: 50px;
+    padding-top: 160px;
+    text-align: center;
+    opacity: 0;
+    transition: all ease 0.8s;
+    
+}
+
+.overlay h3{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    /* white-space: nowrap; */
+    font-weight: 600;
+}
+ 
+.card:hover .overlay{
+    opacity: 0.6;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+
+#orange-div{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    justify-content: space-between;
+    /* background-color: red; */
+    background: linear-gradient(to left bottom, rgb(206, 83, 0),rgb(255, 181, 124));
+}
+
+#orange-div h3{
+    width: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#orange-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 10%;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+#page3>p{
+    font-size: 25px;
+    font-weight: 500;
+    width: 70%;
+    line-height: 35px;
+    text-align: center;
+}
+
+#page3 img{
+    position: absolute;
+    height: 80px;
+}
+
+#page3 #colon1{
+    left: 10%;
+    top: 25%;
+}
+
+#page3 #colon2{
+    right: 12%;
+    bottom: 29%;
+}
+
+#page4{
+    height: 50vh;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+
+}
+
+/* #page4 img{
+    height: 300px;
+    width: 300px;
+}     */
+     
+
+.elem{
+    height: 50%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 2%;
+    position: relative;
+}   
+
+.elem h2{
+    font-size: 40px;
+    height: 100%;
+    width: 100%;
+    background-color: #ff3300;
+    display: flex;
+    transition: all ease 0.5s;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 20%;
+}
+
+.elem:hover h2{
+    color: #ffffff;
+    font-size: 50px;
+    background-color: transparent;
+}
+
+#page4 h1{
+    font-size: 60px;
+    font-family: roboto;
+    position: absolute;
+    font-weight: 500;
+    top: -5%;
+    color: #000000;
+    -webkit-text-stroke:1px #fff;
+}
+
+
+#footer{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #dcd6d5, #53504f );
+    /* opacity: 30%; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 110px;
+    padding: 0 100px;
+    
+}
+
+/* #footlogo{
+    position: absolute;
+    left: 0;
+    height: 60px;
+    width: 20px;
+    z-index: 0;
+} */
+
+#footlogo #f2, #f3, #f4{
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+#footlogo img{
+    /* font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500; */
+    height: 70px;
+    width: 250px;
+    margin-bottom: 8px;
+}
+
+#f2 h3{
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+#f3 h3{
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+#f4 h3{
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
